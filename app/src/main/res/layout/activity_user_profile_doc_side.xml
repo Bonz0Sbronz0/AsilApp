@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_container_DocSide"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkg"
+    tools:context=".Doc.DocActivity.UserProfileDocSideActivity">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/docImageprofile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/ic_person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/pdfButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#4CAF50"
+        android:text="@string/documenti"
+        android:textSize="16sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/docImageprofile" />
+
+    <Button
+        android:id="@+id/misureButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#4CAF50"
+        android:text="@string/misurazioni"
+        android:textSize="16sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/docImageprofile" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="339dp"
+        android:layout_height="383dp"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/lavender_border"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/lavender_border"
+                    android:drawableLeft="@drawable/ic_person"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/nome"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/surname"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/lavender_border"
+                    android:drawableLeft="@drawable/ic_person"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/cognome"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/lavender_border"
+                    android:drawableLeft="@drawable/ic_person"
+                    android:drawablePadding="8dp"
+                    android:hint="Genere"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/birthdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/lavender_border"
+                    android:drawableLeft="@drawable/ic_baseline_cake_24"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/anno_di_nascita"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/placebirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/lavender_border"
+                    android:drawableLeft="@drawable/ic_baseline_place_24"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/luogo_di_nascita"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/user_email_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/lavender_border"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/email"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/lavender_border"
+                    android:drawableLeft="@drawable/ic_baseline_phone_android_24"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/telefono"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/centroAccoglienza"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/lavender_border"
+                    android:drawableLeft="@drawable/ic_baseline_my_location_24"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/centro_di_accoglienza"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

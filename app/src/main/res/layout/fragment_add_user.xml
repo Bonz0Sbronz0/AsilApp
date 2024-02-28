@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkg"
+    tools:context=".Doc.DocActivity.AddUserFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="71dp">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/toolbar" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="327dp"
+            android:layout_height="576dp"
+            android:layout_margin="30dp"
+            android:layout_marginTop="63dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/lavender_border"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="cursive"
+                        android:text="Registra paziente"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.494"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.343" />
+
+                    <EditText
+                        android:id="@+id/nome"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/lavender_border"
+                        android:drawableLeft="@drawable/ic_person"
+                        android:drawablePadding="8dp"
+                        android:hint="Nome"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/cognome"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/lavender_border"
+                        android:drawableLeft="@drawable/ic_person"
+                        android:drawablePadding="8dp"
+                        android:hint="Cognome"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <Spinner
+                        android:id="@+id/genere"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/lavender_border"
+                        android:drawablePadding="8dp"
+                        android:entries="@array/genere"
+                        android:hint="Genere"
+                        android:padding="10dp"
+                        android:textColor="@color/black" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/datanascita"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/lavender_border"
+                        android:drawableLeft="@drawable/ic_baseline_cake_24"
+                        android:drawablePadding="8dp"
+                        android:hint="Data di nascita"
+                        android:inputType="none"
+                        android:focusable="false"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/luogonascita"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/lavender_border"
+                        android:drawableLeft="@drawable/ic_baseline_place_24"
+                        android:drawablePadding="8dp"
+                        android:hint="Luogo di nascita"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        tools:layout_editor_absoluteX="156dp"
+                        android:completionThreshold="1"/>
+
+                    <Spinner
+                        android:id="@+id/centroOspitante"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/lavender_border"
+                        android:drawableLeft="@drawable/ic_person"
+                        android:drawablePadding="8dp"
+                        android:hint="Centro Ospitante"
+                        android:padding="10dp"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/lavender_border"
+                        android:drawableLeft="@drawable/ic_baseline_phone_android_24"
+                        android:drawablePadding="8dp"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/telefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/lavender_border"
+                        android:drawableLeft="@drawable/ic_baseline_phone_android_24"
+                        android:drawablePadding="8dp"
+                        android:hint="Telefono"
+                        android:inputType="phone"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:id="@+id/btnRegister"
+                        android:layout_width="201dp"
+                        android:layout_height="57dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:text="avanti"
+                        android:textSize="15sp"
+                        app:cornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/phoneDocModify"
+                        app:layout_constraintVertical_bias="0.0" />
+                </LinearLayout>
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

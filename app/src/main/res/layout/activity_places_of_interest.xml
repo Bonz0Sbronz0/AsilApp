@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/toolbar" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".Paziente.PazienteActivity.PlacesOfInterestActivity" />
+
+            <!-- Pulsanti di zoom -->
+            <LinearLayout
+                android:id="@+id/zoomButtonsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical">
+
+                <!-- Pulsante di zoom in -->
+                <ImageButton
+                    android:id="@+id/zoomInButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_zoom_in"
+                    android:background="@drawable/rounded_button_semi_transparent_primary"
+                    android:contentDescription="@string/zoom_in"
+                    android:onClick="onZoomInClick"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="8dp"/>
+
+                <!-- Pulsante di zoom out -->
+                <ImageButton
+                    android:id="@+id/zoomOutButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_zoom_out"
+                    android:background="@drawable/rounded_button_semi_transparent_primary"
+                    android:contentDescription="@string/zoom_out"
+                    android:onClick="onZoomOutClick"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:elevation="8dp"/>
+            </LinearLayout>
+            <!-- Fine pulsanti di zoom -->
+
+            <!-- Aggiungi i tuoi elementi UI per la mappa qui -->
+            <LinearLayout
+                android:id="@+id/mapOverlayLayout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="bottom|center_horizontal"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom">
+
+                <ImageButton
+                    android:id="@+id/nearbyHospitalsBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:onClick="onClick"
+                    android:src="@mipmap/ic_hospital"
+                    android:contentDescription="@string/nearby_hospitals_button_desc"
+                    android:scaleType="centerCrop"
+                    android:padding="5dp"
+                    android:background="@drawable/rounded_button_semi_transparent_primary"
+                    android:elevation="8dp"/>
+
+                <ImageButton
+                    android:id="@+id/nearbySchoolsBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:onClick="onClick"
+                    android:src="@mipmap/ic_school"
+                    android:contentDescription="@string/nearby_schools_button_desc"
+                    android:scaleType="centerCrop"
+                    android:padding="5dp"
+                    android:background="@drawable/rounded_button_semi_transparent_primary"
+                    android:elevation="8dp"/>
+
+                <ImageButton
+                    android:id="@+id/nearbyRestaurantsBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="70dp"
+                    android:layout_marginBottom="5dp"
+                    android:onClick="onClick"
+                    android:src="@mipmap/ic_restaurant"
+                    android:contentDescription="@string/nearby_schools_button_desc"
+                    android:scaleType="centerCrop"
+                    android:padding="5dp"
+                    android:background="@drawable/rounded_button_semi_transparent_primary"
+                    android:elevation="8dp"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

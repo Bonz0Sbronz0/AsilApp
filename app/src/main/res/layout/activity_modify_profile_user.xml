@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bkg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/toolbar" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="327dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_marginTop="50dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/lavender_border"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="cursive"
+                        android:text="Modifica il tuo profilo"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.494"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.343" />
+
+                    <EditText
+                        android:id="@+id/nameUserModify"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/lavender_border"
+                        android:drawableLeft="@drawable/ic_person"
+                        android:drawablePadding="8dp"
+                        android:hint="Nome"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/surnameUserModify"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/lavender_border"
+                        android:drawableLeft="@drawable/ic_person"
+                        android:drawablePadding="8dp"
+                        android:hint="Cognome"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <Spinner
+                        android:id="@+id/genderUserModify"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/lavender_border"
+                        android:drawableLeft="@drawable/ic_person"
+                        android:drawablePadding="8dp"
+                        android:entries="@array/genere"
+                        android:hint="Genere"
+                        android:padding="10dp"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/receptioncenterUserModify"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/lavender_border"
+                        android:drawableLeft="@drawable/ic_person"
+                        android:drawablePadding="8dp"
+                        android:hint="Centro Accoglienza"
+                        android:padding="10dp"
+                        android:textColor="@color/black" />
+
+
+                    <EditText
+                        android:id="@+id/phoneUserModify"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/lavender_border"
+                        android:drawableLeft="@drawable/ic_baseline_phone_android_24"
+                        android:drawablePadding="8dp"
+                        android:hint="Telefono"
+                        android:inputType="phone"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:id="@+id/btnSaveModify"
+                        android:layout_width="201dp"
+                        android:layout_height="57dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/salva_le_modifiche"
+                        android:textSize="15sp"
+                        app:cornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/phoneDocModify"
+                        app:layout_constraintVertical_bias="0.0" />
+                </LinearLayout>
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

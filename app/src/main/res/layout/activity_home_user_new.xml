@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Doc.DocActivity.HomeDocNewActivity"
+    android:background="@color/colorHomeDocBackground">
+
+    <!-- ImageView della dottoressa -->
+    <ImageButton
+        android:id="@+id/videoThumbnail"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/rounded_button"
+        android:elevation="6dp"
+        android:src="@drawable/ic_video"
+        app:tint="@color/colorPrimary" />
+
+    <ImageView
+        android:id="@+id/doctorImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="200dp"
+        android:src="@drawable/young_woman"
+        app:layout_anchor= "@id/rectangleBackground" />
+
+    <ImageButton
+        android:id="@+id/profileImageButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/rounded_button"
+        android:src="@drawable/ic_profile"
+        app:tint="@color/colorPrimary"
+        android:elevation="6dp"/>
+
+    <TextView
+        android:id="@+id/greetingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/benvenuto"
+        android:textStyle="bold"
+        android:layout_gravity="start"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="100dp"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/nomePazienteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="130dp"
+        android:text=""
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/greeting2TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/come_va_oggi"
+        android:layout_gravity="start"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="200dp"
+        android:textSize="15sp"
+        android:textColor="#80221F1F"/>
+
+    <FrameLayout
+        android:id="@+id/rectangleContainer"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_anchor="@id/bottomAppBar"
+        app:layout_anchorGravity="top">
+
+        <!-- Rettangolo di sfondo -->
+        <View
+            android:id="@+id/rectangleBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_rectangle"/>
+
+        <!-- Riga Superiore-->
+        <ImageButton
+            android:id="@+id/imageButtonMeasurements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/icon_circle_pat"
+            android:elevation="6dp"
+            android:src="@drawable/ic_measurements" />
+
+        <TextView
+            android:id="@+id/measurements_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/misurazioni"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="130dp"
+            android:layout_gravity="top|start"/>
+
+        <ImageButton
+            android:id="@+id/imageButtonCara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/icon_circle_pat"
+            android:elevation="6dp"
+            android:src="@drawable/ic_cara" />
+
+        <TextView
+            android:id="@+id/cara_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cara"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="130dp"
+            android:layout_gravity="top|center"/>
+
+        <ImageButton
+            android:id="@+id/imageButtonDocuments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/icon_circle_pat"
+            android:elevation="6dp"
+            android:src="@drawable/ic_documents" />
+
+        <TextView
+            android:id="@+id/documents_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/documents"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginEnd="34dp"
+            android:layout_marginTop="130dp"
+            android:layout_gravity="top|end"/>
+
+        <!-- Riga Inferiore-->
+        <ImageButton
+            android:id="@+id/imageButtonPlacesOfInterest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/icon_circle_pat"
+            android:elevation="6dp"
+            android:src="@drawable/ic_place_of_interest" />
+
+        <TextView
+            android:id="@+id/places_textview"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="@string/luoghi_d_interesse"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center|start"/>
+
+        <ImageButton
+            android:id="@+id/imageButtonGeneralInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/icon_circle_pat"
+            android:elevation="6dp"
+            android:src="@drawable/ic_general_info" />
+
+        <TextView
+            android:id="@+id/general_info_textview"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:text="@string/informazioni_generali"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center|center"/>
+
+        <ImageButton
+            android:id="@+id/imageButtonExpenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/icon_circle_pat"
+            android:elevation="6dp"
+            android:src="@drawable/ic_expenses" />
+
+        <TextView
+            android:id="@+id/expenses_textview"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:text="@string/gestione_spese"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_marginEnd="34dp"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center|end"/>
+
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="50dp"
+        app:backgroundTint="@color/colorPrimary">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavViewPatient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            app:menu="@menu/bottom_nav_menu_doc"
+            app:itemIconTint="@android:color/white"
+            app:itemTextColor="@color/text_color_selector"/>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_emergencycall"
+        app:layout_anchor="@id/bottomAppBar"
+        android:backgroundTint="@color/colorPrimary"
+        app:tint="@android:color/white"
+        android:elevation="6dp"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

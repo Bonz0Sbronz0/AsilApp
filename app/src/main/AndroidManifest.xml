@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permisson.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_PRIVILEGED"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_def"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_def"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".Doc.DocActivity.ModifyPatientProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Paziente.PazienteActivity.HomeUserNewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Paziente.PazienteActivity.UserProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Doc.DocActivity.UserProfileDocSideActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".Paziente.PazienteActivity.VideoActivity"
+            android:exported="false"
+            android:screenOrientation="sensor"/>
+        <activity
+            android:name=".Doc.DocActivity.QrCodeReaderActivity"
+            android:exported="false"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name=".Paziente.PazienteActivity.PanicButtonActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Paziente.PazienteActivity.WikiCityInfoActivity"
+            android:exported="false"
+            android:screenOrientation="sensor" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".Paziente.PazienteActivity.PlacesOfInterestActivity"
+            android:exported="false"
+            android:label="@string/title_activity_places_of_interest"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name=".Paziente.PazienteActivity.CityInfoActivity"
+            android:exported="false"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name=".Shared.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Shared.LoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Doc.DocActivity.HomeDocActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Doc.DocActivity.HomeDocNewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Doc.DocActivity.RegisterDocActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Paziente.PazienteActivity.HomeUserActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Doc.DocActivity.ModifyProfileDoc"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Doc.DocActivity.DocProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Shared.ForgotPasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Paziente.PazienteActivity.InfoCentroActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Doc.DocActivity.BluetoothActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Shared.ChoseLoginActivity"
+            android:exported="false"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name=".Doc.DocActivity.ListUserActivity"
+            android:exported="false"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            android:stateNotNeeded="true"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".object.SensorHandler"
+            android:exported="false" />
+        <activity
+            android:name=".Paziente.PazienteActivity.CostActivity"
+            android:exported="false"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name=".Paziente.PazienteActivity.StoricoMisurazioniActivity"
+            android:exported="false"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name=".Doc.DocActivity.StoricoMisurazioneDocActivity"
+            android:exported="false"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name=".Paziente.PazienteActivity.DocumentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Doc.DocActivity.DocumentDocActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Doc.DocActivity.AddDocumentDocActivity"
+            android:exported="false"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name=".Paziente.PazienteActivity.AddDocumentUserActivity"
+            android:exported="false"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name=".Paziente.PazienteActivity.ModifyProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="it.uniba.dib.sms232413.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
+        </provider>
+    </application>
+
+</manifest>

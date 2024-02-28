@@ -1,0 +1,86 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/user_card_top"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="40dp">
+        <ImageButton
+            android:contentDescription="@string/close_user_card"
+            android:id="@+id/close_userCard_circle"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:src="@drawable/close_circle_line"
+            android:background="@drawable/close_circle_line"
+            android:backgroundTint="@color/white"
+            android:layout_gravity="top|end">
+        </ImageButton>
+
+
+        <View
+            android:id="@+id/user_card_waves_top"
+            android:layout_width="250dp"
+            android:layout_height="315dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/ic_wave" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center"
+            android:orientation="vertical"
+            android:layout_marginTop="70dp">
+            <TextView android:id="@+id/nome_card"
+                android:layout_gravity="center_horizontal|center"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/nome_color"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/nome_string"/>
+            <TextView android:id="@+id/cognome_card"
+                android:layout_gravity="center_horizontal|center"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/nome_color"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/cognome_string"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/user_avatar"
+            android:layout_gravity="center"
+            android:layout_marginBottom="90dp"
+            android:layout_marginTop="40dp"/>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        app:fabCustomSize="38dp"
+        android:id="@+id/arrow_fab_toUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_right"
+        app:layout_anchor="@id/user_card_waves_top"
+        android:backgroundTint="@color/white"
+        app:tint="#024A2E"
+        app:layout_anchorGravity="bottom|center"
+        android:contentDescription="@string/change_to_profileCard"
+        app:elevation="42dp">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

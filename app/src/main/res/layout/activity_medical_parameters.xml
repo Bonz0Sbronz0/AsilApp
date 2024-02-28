@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- TEMPERATURE -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/temperatureCardView"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textViewTemperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/temperature"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/image_seeTemperatureStats"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="@string/temperature"
+                    app:srcCompat="@drawable/graphic" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- PRESSURE -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pressureCardView"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textViewPressure"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/pressure"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/image_seePressureStats"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="@string/pressure"
+                    app:srcCompat="@drawable/graphic" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- GLYCEMIA -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/glycemiaCardView"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textViewGlycemia"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/glycemia"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/image_seeGlycemiaStats"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="@string/glycemia"
+                    app:srcCompat="@drawable/graphic" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- HEARTBEAT -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/heartbeatCardView"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textViewHeartbeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/heartbeat"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/image_seeHeartbeatStats"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="@string/heartbeat"
+                    app:srcCompat="@drawable/graphic" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- HYPERTENSION -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/hypertensionCardView"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textViewHypertension"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/hypertension"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/image_SeeHypertensionStats"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="@string/hypertension"
+                    app:srcCompat="@drawable/graphic" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- DIABETES MELLITUS -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/diabetesCardView"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textViewDiabetesMellitus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/diabetes"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/image_seeDiabetesStats"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="@string/diabetes"
+                    app:srcCompat="@drawable/graphic" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#068251</color>
+    <color name="sfondo">#f2f2f2</color>
+    <color name="colorPrimary">#068251</color>
+    <color name="semiTransparentColorPrimary">#50068251</color>
+    <color name="colorAccent">#ADADAD</color>
+    <color name="colorAccentDark">#078000</color>
+    <color name="dialog_color_1">#108E3D</color>
+    <color name="dialog_color_2">#FDD739</color>
+    <color name="red">#FF0000</color>
+
+    <color name="colorPrimaryDark">#00574B</color>
+
+    <color name="_bg__frame_1_ek2_color">#FFFFFF</color>
+    <color name="nome_color">#FFFFFF</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="colorHomeDocBackground">#60AF90</color>
+
+</resources>

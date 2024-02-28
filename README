@@ -1,0 +1,62 @@
+Progetto SMS Asil-App
+SprintBacklog
+StakeHolder: 
+  -Personale sanitario
+  -Richiedenti Asilo
+-supporto multilingua(in comune con paziente)
+UserStory(Item funzionali):
+PERSONALE SANITARIO
+	-SEZIONE PROFILO MEDICO (FATTO)
+		COME personale sanitario DEVO POTER creare una sezione dedicata al medico di profilo PER POTER condividere con i miei pazienti
+	-SEZIONE REGISTRAZIONE UTENTE 	
+		COME personale sanitario DEVO POTER  avere una sezione di registrazione dell'paziente PER POTER registrare il paziente a me associato-->INSERIRE RICERCA TRAMITE QRCODE
+	-LISTA PAZIENTI
+		COME personale sanitario  DEVO POTER avere una sezione dove si possono consultare tutti i pazienti a me associati PER POTER avere la lista dei miei pazienti
+	-PROFILO PAZIENTE(in comune con paziente eccetto alcune funzionalità)->SEZIONE MODIFICA PAZIENTE
+		COME personale sanitario DEVO POTER avere una sezione dove posso consultare un singolo paziente a me associato PER POTER consultare i suoi dati clinici
+	-CONTENITORE (FATTO)
+		COME personale sanitario  DEVO POTER utilizzare degli strumenti medici Iot direttamente collegati con il device PER POTER registrare direttamente i risultati delle misurazioni cliniche
+	-sezione video informativi targettizzati per tipologia di paziente(prof ha detto di metterne 2 gruppi principali di paziente)
+	-VISUALIZZAZIONE RISPOSTE AI QUESTIONARI X SINGOLI PAZIENTI(da vedere)
+	-QRCODE RICONOSCIMENTO 
+		->CARD BREVE CON NOME E COGNOME VISUALIZZABILE AL RICONOSCIMENTO DEL QR CODE
+		->PICCOLO MENU AL TOCCO DELLA CARD CHE TI REINDIRIZZA A STORICO MISURAZIONI O PROFILO ANAGERAFICA PAZIENTE
+
+	-SEZIONE STORICO MISURAZIONI COLLEGATA AL PROFILO UTENTE TRAMITE CUI EFFETTUARE LE MISURAZIONI PER OGNI CATEGORIA DI STRUMENTO->(contenitore accessibile solo da questa sezione)
+
+	
+	
+RICHIEDENTE ASILO
+	-VISUALIZZAZIONE INFORMAZIONI SUL LUOGO DI RESIDENZA(Fatto)
+		COME richiedente asilo DEVO POTER visualizzare informazioni generali del luogo in cui risiedo PER POTER avere più confidenzialità con il luogo in cui mi trovo
+	-VISUALIZZAZIONE LUOGHI DI INTERESSE(Fatto)
+		COME richiedente asilo DEVO POTER visualizzare i luoghi d'interesse del luogo in cui risiedo PER POTER avere punti d'interesse di riferimento del luogo in cui mi trovo
+
+	-SUPPORTO TRAMITE CHATBOT -> REALIZZAZIONE TRAMITE AI O CHATBOT CON DOMANDE PREDEFINITE
+		- CITTADINANZA E BUONE NORME DI CONVIVENZA 
+		- ASSISTENZA DOTTORE/MEDICA 
+
+	  
+
+	-SEZIONE PROFILO UTENTE
+		- SEZIONE ANAGRAFICA
+		- SEZIONE PARAMETRI MEDICI(TEMP,PRESSIONE,GLICEMIA ECC)-->MOSTRARE STORICO MISURAZIONI X OGNI PARAM
+		- SEZIONE PATOLOGIE O SEGNALAZIONI DA PARTE DEL MEDICO(ALLERGIE)
+
+	-SEZIONE INFO:
+		-VIDEO INFORMATIVI SU PATOLOGIE
+		-INFORMAZIONI SUL CENTRO DI ACCOGLIENZA(NOME CENTRO, INDIRIZZO, POSIZIONI, COLL A REGOLE INTERNE(SCARICABILI),SERVIZI) (FATTO/QUASI COMPLETATO)
+		-INFO SU CITTA(COLL A WIKIPEDIA/POPUP PER INFO CITTA, AMBULATORI, UFFICI POSTALI(MAPS), EDIFICI SPIRITUALI
+		SCUOLE, FARMACIE) (FATTO/QUASI COMPLETATO)
+		-NUMERI UTILI CON COLLEGAMENTO A TELEFONO DIRETTO (FATTO->COMPLETARE AUTOMAZIONE NUMERO DOTTORE)
+
+
+		 (((((NECESSITA BASILARI(SUPERMERCATO + VICINO, MEDICINE IL TUTTO CON CODICE PERSONALI PER ADERIRE A CONVENZIONI CON QR CODE), 
+			DETT APP(TUTORIAL APP)->SCARICABILE
+, RATING APP,))))))))????? OPZIONALE PROSSIMO SPRINT
+	-PANIC BUTTON CON 112 (FATTO)
+
+	- VIDEO ISTRUTTIVI SULL'ITALIANO(SEZIONE CULTURALE)
+
+INFO:
+-ELIMINARE LA CUSTOM TOOLBAR ED INSERIRE QUELLA DI ANDROID STOCK

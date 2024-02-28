@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/miHome"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/miLanguage"
+        android:title="@string/lingua"
+        android:icon="@drawable/ic_language"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/placeHolder"
+        android:title=""
+        android:enabled="false"/>
+
+    <item android:id="@+id/miProfile"
+        android:title="@string/profilo"
+        android:icon="@drawable/ic_profile"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/miLogout"
+        android:title="@string/logout"
+        android:icon="@drawable/ic_logout"
+        app:showAsAction="always"/>
+</menu>

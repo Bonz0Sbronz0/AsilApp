@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/videoCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="16dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/videoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat"
+            android:textAlignment="center"
+            android:textColor="#00A61B"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/playIcon"
+                android:layout_width="346dp"
+                android:layout_height="207dp"
+                android:layout_gravity="center"
+                android:contentDescription="Play Icon"
+                android:src="@drawable/ic_pl" />
+
+            <ImageView
+                android:id="@+id/transparentImage"
+                android:layout_width="102dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_play" />
+        </FrameLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

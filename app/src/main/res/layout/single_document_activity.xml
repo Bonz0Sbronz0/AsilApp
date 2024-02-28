@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewDocument"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="13dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginRight="20dp"
+    android:background="@color/white"
+    app:cardCornerRadius="40dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/listview_background3">
+
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="146dp"
+            android:layout_height="140dp"
+            android:contentDescription="@string/image"
+            android:src="@drawable/ic_baseline__pdf_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.346"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.733">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/singleDocTextView"
+            android:layout_width="177dp"
+            android:layout_height="31dp"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:text="@string/documents"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.34"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/downloadDocumentButton"
+            android:layout_width="42dp"
+            android:layout_height="35dp"
+            android:background="@drawable/bg_btn5"
+            android:src="@drawable/ic_baseline_file_download_dark_green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.888"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/readDocumentButton"
+            app:layout_constraintVertical_bias="0.142" />
+
+        <ImageView
+            android:id="@+id/readDocumentButton"
+            android:layout_width="42dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/ic_baseline_read_eye_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.888"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/shareDocumentButton"
+            app:layout_constraintVertical_bias="0.094" />
+
+        <ImageView
+            android:id="@+id/shareDocumentButton"
+            android:layout_width="42dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_baseline_share_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.888"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.026" />
+
+        <ImageView
+            android:id="@+id/deleteDocumentButton"
+            android:layout_width="42dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="9dp"
+            android:src="@drawable/ic_baseline_delete_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.888"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/downloadDocumentButton"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

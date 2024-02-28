@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sfondo">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/toolbar" />
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="211dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border_register"
+            android:entries="@array/category_measurements"
+            android:gravity="center_vertical"
+            android:paddingStart="16sp"
+            android:paddingEnd="16sp"
+            android:spinnerMode="dropdown"
+            android:textColor="@android:color/black"
+
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <ImageView
+            android:id="@+id/addMeasurements"
+            android:layout_width="83dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="Aggiungi misurazione"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toEndOf="@+id/categorySpinner"
+            app:layout_constraintTop_toTopOf="@+id/textView9"
+            app:srcCompat="@drawable/contenitore" />
+
+        <ImageView
+            android:id="@+id/selectDate"
+            android:layout_width="53dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/calendar"
+            android:contentDescription="Misurazioni"
+            app:layout_constraintEnd_toStartOf="@+id/categorySpinner"
+            app:layout_constraintHorizontal_bias="0.671"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <ScrollView
+            android:layout_width="410dp"
+            android:layout_height="161dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categorySpinner"
+            app:layout_constraintVertical_bias="0.272">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/sfondo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SearchView"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/misurazoni_effettuate"
+            android:textColor="@color/green"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Doc.DocActivity.HomeDocNewActivity"
+    android:background="@color/colorHomeDocBackground">
+
+    <!-- ImageView della dottoressa -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logoLogin"
+        android:src="@drawable/ic_login_logo"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"/>
+
+
+    <FrameLayout
+        android:id="@+id/rectangleContainer"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="bottom"
+        app:layout_anchorGravity="top">
+
+        <!-- Rettangolo di sfondo -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rectangleBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_rectangle">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="cursive"
+                android:text="Scegli come Accedere"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageButton
+                android:id="@+id/imageButtonUserLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:background="@drawable/icon_circle_doc"
+                android:elevation="6dp"
+                android:src="@drawable/ic_patient_login"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- TextView 1 -->
+            <TextView
+                android:id="@+id/add_user_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:text="Paziente"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:layout_marginBottom="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageButtonUserLogin"
+                app:layout_constraintStart_toStartOf="@+id/imageButtonUserLogin"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonUserLogin" />
+
+            <!-- ImageButton 2 -->
+            <ImageButton
+                android:id="@+id/imageButtonDoctorLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:background="@drawable/icon_circle_doc"
+                android:elevation="6dp"
+                android:src="@drawable/ic_doctor_login"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/list_user_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_marginBottom="70dp"
+                android:text="Dottore"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageButtonDoctorLogin"
+                app:layout_constraintStart_toStartOf="@+id/imageButtonDoctorLogin"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonDoctorLogin" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </FrameLayout>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

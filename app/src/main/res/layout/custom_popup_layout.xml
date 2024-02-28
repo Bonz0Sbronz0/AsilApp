@@ -1,0 +1,146 @@
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/lavender_border"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/effettua_nuove_misurazioni"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/temperatura"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lavender_border"
+                android:drawableLeft="@drawable/heart"
+                android:drawableRight="@drawable/ic_baseline_add_circle_white"
+                android:drawablePadding="8dp"
+                android:hint="@string/temperature"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/pressione"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lavender_border"
+                android:drawableLeft="@drawable/heart"
+                android:drawableRight="@drawable/ic_baseline_add_circle_white"
+                android:drawablePadding="8dp"
+                android:hint="@string/pressure"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/glicemia"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lavender_border"
+                android:drawableLeft="@drawable/heart"
+                android:drawableRight="@drawable/ic_baseline_add_circle_white"
+                android:drawablePadding="8dp"
+                android:hint="@string/glycemia"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/battitocardiaco"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lavender_border"
+                android:drawableLeft="@drawable/heart"
+                android:drawableRight="@drawable/ic_baseline_add_circle_white"
+                android:drawablePadding="8dp"
+                android:hint="@string/heartbeat"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/ipertensione"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lavender_border"
+                android:drawableLeft="@drawable/heart"
+                android:drawableRight="@drawable/ic_baseline_add_circle_white"
+                android:drawablePadding="10dp"
+                android:hint="@string/hypertension"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/diabete"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lavender_border"
+                android:drawableLeft="@drawable/heart"
+                android:drawableRight="@drawable/ic_baseline_add_circle_white"
+                android:drawablePadding="8dp"
+                android:hint="@string/diabetes"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/tremore"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lavender_border"
+                android:drawableLeft="@drawable/heart"
+                android:drawableRight="@drawable/ic_baseline_add_circle_white"
+                android:drawablePadding="8dp"
+                android:hint="@string/tremor"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/btn_close_popup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:text="@string/termina"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -36,6 +36,7 @@ import it.uniba.dib.sms232413.Database.DBCentroAccoglienza;
 import it.uniba.dib.sms232413.Database.DBUtenti;
 import it.uniba.dib.sms232413.R;
 import it.uniba.dib.sms232413.object.CentroAccoglienza;
+import it.uniba.dib.sms232413.object.PersonaleAutorizzato;
 
 public class AddUserFragment extends Fragment {
 
@@ -50,12 +51,20 @@ public class AddUserFragment extends Fragment {
     final private String type = "user";
     private FirebaseFirestore db;
     private FirebaseAuth auth;
-    String idDoc = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
-    String emailDoc = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getEmail();
+    String idDoc;
+    String emailDoc;
+    PersonaleAutorizzato personaleAutorizzato;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Bundle bundle = getArguments();
+        if (bundle!=null){
+            personaleAutorizzato = bundle.getParcelable("user_data");
+            assert personaleAutorizzato != null;
+            idDoc = personaleAutorizzato.getId();
+            emailDoc = personaleAutorizzato.getEmail();
+        }
         return inflater.inflate(R.layout.fragment_add_user, container, false);
     }
 
@@ -145,6 +154,7 @@ public class AddUserFragment extends Fragment {
                                                     if(emailTask.isSuccessful()) {
                                                         Toast.makeText(v.getContext(), "Utente registrato", Toast.LENGTH_LONG).show();
                                                         Intent intent = new Intent(v.getContext(), ListUserActivity.class);
+                                                        intent.putExtra("user_data", personaleAutorizzato);
                                                         startActivity(intent);
                                                         requireActivity().finish();
                                                     } else {

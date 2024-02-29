@@ -60,7 +60,7 @@ public class DocumentDocActivity extends AppCompatActivity implements AllDocumen
 
 
         recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setHasFixedSize(true);
+        //recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(documentAdapter);
         searchView = findViewById(R.id.userSearchView);

@@ -85,7 +85,7 @@ public class CostActivity extends AppCompatActivity implements AllCostsSelectLis
         });
 
         recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setHasFixedSize(true);
+        //recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // inizializza il database

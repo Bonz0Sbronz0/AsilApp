@@ -7,7 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@drawable/bkg">
+    android:background="@drawable/bkg"
+    tools:context=".Doc.DocActivity.ModifyPatientProfileActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -32,7 +33,7 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -57,60 +58,6 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.343" />
-
-                    <EditText
-                        android:id="@+id/nameUserModify"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="20dp"
-                        android:background="@drawable/lavender_border"
-                        android:drawableLeft="@drawable/ic_person"
-                        android:drawablePadding="8dp"
-                        android:hint="Nome"
-                        android:inputType="text"
-                        android:padding="10dp"
-                        android:textColor="@color/black"
-                        android:textSize="20dp" />
-
-                    <EditText
-                        android:id="@+id/surnameUserModify"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="20dp"
-                        android:background="@drawable/lavender_border"
-                        android:drawableLeft="@drawable/ic_person"
-                        android:drawablePadding="8dp"
-                        android:hint="Cognome"
-                        android:inputType="text"
-                        android:padding="10dp"
-                        android:textColor="@color/black"
-                        android:textSize="20dp" />
-
-                    <Spinner
-                        android:id="@+id/genderUserModify"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="20dp"
-                        android:background="@drawable/lavender_border"
-                        android:drawableLeft="@drawable/ic_person"
-                        android:drawablePadding="8dp"
-                        android:entries="@array/genere"
-                        android:hint="Genere"
-                        android:padding="10dp"
-                        android:textColor="@color/black" />
-
-                    <Spinner
-                        android:id="@+id/receptioncenterUserModify"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="20dp"
-                        android:background="@drawable/lavender_border"
-                        android:drawableLeft="@drawable/ic_person"
-                        android:drawablePadding="8dp"
-                        android:hint="Centro Accoglienza"
-                        android:padding="10dp"
-                        android:textColor="@color/black" />
-
 
                     <EditText
                         android:id="@+id/phoneUserModify"

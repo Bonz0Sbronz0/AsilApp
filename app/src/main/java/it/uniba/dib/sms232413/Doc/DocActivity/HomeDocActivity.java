@@ -65,8 +65,7 @@ public class HomeDocActivity extends AppCompatActivity {
         LanguageManager.applyLanguage(this);
 
         FirebaseFirestore fStore = FirebaseFirestore.getInstance();
-        userEmail = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getEmail();
-        nomeDocTextView.setText(new SessionManagement(this).getUserAuthSession().getName());
+        userEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
         new DBUtenti().findDocByEmail(userEmail).addOnCompleteListener(task -> {
             if (task.isSuccessful()){
                 nomeDocTextView.setText(task.getResult().getName());
@@ -105,8 +104,13 @@ public class HomeDocActivity extends AppCompatActivity {
         });
 
         imageButtonAddUser.setOnClickListener(v -> {
+            Bundle bundle = new Bundle();
+            bundle.putParcelable("user_data", profilo);
+
+            AddUserFragment addUserFragment = new AddUserFragment();
+            addUserFragment.setArguments(bundle);
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.home_doc_container, new AddUserFragment())
+                    .replace(R.id.home_doc_container, addUserFragment)
                     .addToBackStack(null)
                     .commit();
         });
@@ -128,8 +132,6 @@ public class HomeDocActivity extends AppCompatActivity {
         super.onStart();
         hideLoadingPage();
     }
-
-    // Metodo per visualizzare la finestra di selezione della lingua
 
     // Metodo per visualizzare la finestra di selezione della lingua
     private void showLanguageSelectionDialog() {

@@ -60,10 +60,9 @@ public class ListUserActivity extends AppCompatActivity implements ListenerUserL
 
     //date from database
     FirebaseAuth auth;
-    BottomNavigationView bottomNavigationViewDoc;
-    FloatingActionButton scanQrCode;
     private SwipeRefreshLayout swipeRefreshLayout;
     PersonaleAutorizzato personaleAutorizzato;
+    String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,8 +78,14 @@ public class ListUserActivity extends AppCompatActivity implements ListenerUserL
         swipeRefreshLayout = findViewById(R.id.swipe_refresh_id);
 
         personaleAutorizzato = getIntent().getParcelableExtra("user_data");
+
+        Bundle bundle = new Bundle();
+        bundle.putParcelable("user_data",personaleAutorizzato);
+
+        AddUserFragment addUserFragment = new AddUserFragment();
+        addUserFragment.setArguments(bundle);
         addUser.setOnClickListener(v -> getSupportFragmentManager().beginTransaction()
-                .replace(R.id.drawer_layout, new AddUserFragment())
+                .replace(R.id.drawer_layout, addUserFragment)
                 .addToBackStack(null)
                 .commit());
 
@@ -97,7 +102,7 @@ public class ListUserActivity extends AppCompatActivity implements ListenerUserL
             }
         });
         recyclerView = findViewById(R.id.recyclerListPatientView);
-        recyclerView.setHasFixedSize(true);
+        //recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         swipeRefreshLayout.setOnRefreshListener(() -> {
@@ -177,6 +182,7 @@ public class ListUserActivity extends AppCompatActivity implements ListenerUserL
                     String email =  emailTV.getText().toString();
 
                     Intent intent = new Intent(ListUserActivity.this, ModifyPatientProfileActivity.class);
+                    intent.putExtra("user_data", personaleAutorizzato);
                     intent.putExtra("selected_user_email", email);
                     startActivity(intent);
                     Objects.requireNonNull(recyclerView.getAdapter()).notifyItemChanged(position);
@@ -244,7 +250,7 @@ public class ListUserActivity extends AppCompatActivity implements ListenerUserL
     private void eventChangeListener() {
         dbUtenti.getCollectionInstance()
                 .whereEqualTo("type", "user")
-                .whereEqualTo("emailDoc", new SessionManagement(this).getUserAuthSession().getEmail())
+                .whereEqualTo("emailDoc", personaleAutorizzato.getEmail())
                 .orderBy("name", Query.Direction.ASCENDING)
                 .addSnapshotListener((value, e) -> {
                     if (e != null) {

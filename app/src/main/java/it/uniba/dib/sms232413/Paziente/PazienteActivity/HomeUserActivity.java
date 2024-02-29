@@ -45,7 +45,8 @@ public class HomeUserActivity extends AppCompatActivity {
     TextView nomePazienteTextView;
     ImageButton videoThumbnail;
     Paziente paziente;
-    ImageButton profileImageButton;FirebaseFirestore fStore = FirebaseFirestore.getInstance();
+    ImageButton profileImageButton;
+    FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     String userEmail = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getEmail();
     private ProgressDialog progressDialog;
 
@@ -95,7 +96,7 @@ public class HomeUserActivity extends AppCompatActivity {
                     String nationality = document.getString("nationality");
                     String receptioncenter = document.getString("receptionceter");
                     String email = document.getString("email");
-                    String telefono = document.getString("telefono");
+                    String telefono = document.getString("phone");
                     String emailDoc = document.getString("name");
                     String idDoc = document.getString("emailDoc");
                     String password = document.getString("password");
@@ -158,6 +159,7 @@ public class HomeUserActivity extends AppCompatActivity {
 
         imageButtonCara.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(), InfoCentroActivity.class);
+            intent.putExtra("user_data", paziente);
             startActivity(intent);
         });
 
@@ -247,6 +249,43 @@ public class HomeUserActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        fStore.collection("User").whereEqualTo("email", userEmail).get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                QuerySnapshot querySnapshot = task.getResult();
+                for (QueryDocumentSnapshot document : querySnapshot) {
+                    // Ottieni i dati del documento
+                    String id = document.getString("id");
+                    String name = document.getString("name");
+                    String surname = document.getString("surname");
+                    String gender = document.getString("gender");
+                    String birthdate = document.getString("birthdate");
+                    String placeBirth = document.getString("placeBirth");
+                    String nationality = document.getString("nationality");
+                    String receptioncenter = document.getString("receptionceter");
+                    String email = document.getString("email");
+                    String telefono = document.getString("phone");
+                    String emailDoc = document.getString("name");
+                    String idDoc = document.getString("emailDoc");
+                    String password = document.getString("password");
+                    paziente = new Paziente(id, name, surname, gender, birthdate, placeBirth,
+                            nationality, receptioncenter, email,
+                            telefono, emailDoc, idDoc, password);
+                    nomePazienteTextView.setText(paziente.getName());
+                }
+            } else {
+                // Si è verificato un errore durante l'operazione di lettura
+                Exception exception = task.getException();
+                if (exception != null) {
+                    // Log dell'errore
+                    Log.e("Firestore", "Errore durante l'operazione di lettura", exception);
+                }
+                // Puoi gestire l'errore in base alle tue esigenze
+            }
+        });
+    }
 
     @Override
     protected void onDestroy() {

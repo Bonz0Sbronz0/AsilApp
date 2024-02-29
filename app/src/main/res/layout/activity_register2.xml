@@ -144,7 +144,7 @@
                         android:drawableLeft="@drawable/ic_email"
                         android:drawablePadding="8dp"
                         android:hint="@string/email"
-                        android:inputType="text"
+                        android:inputType="textEmailAddress"
                         android:padding="8dp"
                         android:textColor="@color/black"
                         android:textColorHint="@color/grey_font" />

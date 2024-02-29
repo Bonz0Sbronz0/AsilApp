@@ -32,8 +32,7 @@ import it.uniba.dib.sms232413.object.Paziente;
 
 public class ModifyProfileActivity extends AppCompatActivity{
 
-    private EditText nome, cognome, telefono;
-    private Spinner genere, centroaccoglienza;
+    private EditText telefono;
     private FirebaseFirestore db;
 
     private Paziente profilo;
@@ -54,47 +53,21 @@ public class ModifyProfileActivity extends AppCompatActivity{
         db = FirebaseFirestore.getInstance(); //inizializza istanza del db
         Button btnSaveModify = findViewById(R.id.btnSaveModify);
 
-        nome = findViewById(R.id.nameUserModify);
-        cognome = findViewById(R.id.surnameUserModify);
-        genere = findViewById(R.id.genderUserModify);
-        centroaccoglienza= findViewById(R.id.receptioncenterUserModify);
         telefono = findViewById(R.id.phoneUserModify);
         String userId = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
 
-        // Carica l'elenco di nazionalità dalla risorsa
-
-        // Crea un ArrayAdapter
-
-
-        // Recupera i centri di accoglienza da Firebase e popola lo Spinner
-        loadCentriAccoglienza();
-
         btnSaveModify.setOnClickListener(view -> {
 
-            String name = nome.getText().toString();
-            String surname = cognome.getText().toString();
-            String gender = genere.getSelectedItem().toString();
-            String receptionceter = ((CentroAccoglienza) centroaccoglienza.getSelectedItem()).getNameId();
             String phone = telefono.getText().toString();
 
             //control input
-            if(name.isEmpty()){
-                nome.setError(getString(R.string.checkName));
-                nome.requestFocus();
-            }else if(phone.isEmpty()  || !phone.matches(phonePattern)){
+            if(phone.isEmpty()  || !phone.matches(phonePattern)){
                 telefono.setError(getString(R.string.checkPhone));
                 telefono.requestFocus();
-            }else if(surname.isEmpty()){
-                cognome.setError(getString(R.string.checkSurname));
-                cognome.requestFocus();
-            }else {
+            }else{
                 //initialize map
                 Map<String,Object> users = new HashMap<>();
                 //set data in map for db
-                users.put("name", name);
-                users.put("surname", surname);
-                users.put("gender", gender);
-                users.put("receptionceter", receptionceter);
                 users.put("phone", phone);
 
                 //save to DB
@@ -116,32 +89,5 @@ public class ModifyProfileActivity extends AppCompatActivity{
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
         super.onPointerCaptureChanged(hasCapture);
-    }
-
-    private void loadCentriAccoglienza() {
-        DBCentroAccoglienza dbCentroAccoglienza = new DBCentroAccoglienza();
-        dbCentroAccoglienza.getCollectionInstance().get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(Task<QuerySnapshot> task) {
-                if (task.isSuccessful()) {
-                    List<CentroAccoglienza> centriAccoglienza = new ArrayList<>();
-                    for (QueryDocumentSnapshot document : task.getResult()) {
-                        CentroAccoglienza centro = document.toObject(CentroAccoglienza.class);
-                        centriAccoglienza.add(centro);
-                    }
-
-                    // Crea un ArrayAdapter per i nomi dei centri di accoglienza
-                    ArrayAdapter<CentroAccoglienza> centroAdapter = new ArrayAdapter<>(ModifyProfileActivity.this,
-                            android.R.layout.simple_spinner_item, centriAccoglienza);
-                    centroAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-                    // Assegna l'adapter allo Spinner
-                    ModifyProfileActivity.this.centroaccoglienza.setAdapter(centroAdapter);
-                } else {
-                    // Gestisci l'errore
-                    Toast.makeText(ModifyProfileActivity.this, "Errore nel recupero dei centri di accoglienza", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
     }
 }

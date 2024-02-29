@@ -1,5 +1,6 @@
 package it.uniba.dib.sms232413.Paziente.PazienteAdapter;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -21,6 +22,7 @@ public class UserProfileAdapter {
         birthplace = profileView.findViewById(R.id.placebirth);
         email = profileView.findViewById(R.id.user_email_profile);
         phone = profileView.findViewById(R.id.phone);
+        Log.d("telefonopaz:", phone.toString());
         centroAccoglienza = profileView.findViewById(R.id.centroAccoglienza);
     }
 

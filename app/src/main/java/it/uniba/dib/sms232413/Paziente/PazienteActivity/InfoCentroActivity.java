@@ -12,20 +12,25 @@ import com.google.android.material.tabs.TabLayout;
 import it.uniba.dib.sms232413.R;
 import it.uniba.dib.sms232413.Paziente.PazienteAdapter.InfoFragmentAdapter;
 import it.uniba.dib.sms232413.Shared.SessionManagement;
+import it.uniba.dib.sms232413.object.Paziente;
 
 public class InfoCentroActivity extends AppCompatActivity {
-    private static SessionManagement sessionManagement;
     public static String CENTRO_CORRENTE;
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     InfoFragmentAdapter infoFragmentAdapter;
+
+    Paziente paziente;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layout_info);
 
-        sessionManagement = new SessionManagement(this);
-        CENTRO_CORRENTE = sessionManagement.getUserPatientSession().getReceptionceter();
+        paziente = getIntent().getParcelableExtra("user_data");
+
+        assert paziente != null;
+        CENTRO_CORRENTE = paziente.getReceptionceter();
+
 
         tabLayout = findViewById(R.id.tabLayout);
         viewPager2 = findViewById(R.id.pager);
@@ -46,11 +51,6 @@ public class InfoCentroActivity extends AppCompatActivity {
                 tabLayout.selectTab(tabLayout.getTabAt(position));
             }
         });
-
     }
 
-    private static String extractReceptioncenterId(){
-        assert sessionManagement != null;
-        return sessionManagement.getUserPatientSession().getReceptionceter();
-    }
 }

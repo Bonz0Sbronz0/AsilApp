@@ -34,7 +34,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login2);
 
         // Impostazione della visualizzazione a schermo intero
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         // Nascondi la ActionBar se presente
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();

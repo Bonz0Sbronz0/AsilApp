@@ -145,7 +145,7 @@
         <activity
             android:name=".Shared.ChoseLoginActivity"
             android:exported="false"
-            android:screenOrientation="sensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Doc.DocActivity.ListUserActivity"
             android:exported="false"
